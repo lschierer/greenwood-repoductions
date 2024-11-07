@@ -7,6 +7,19 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@spectrum-css/icon':
+        specifier: ^7.2.0
+        version: 7.2.0(@spectrum-css/tokens@14.6.0)
+      '@spectrum-css/page':
+        specifier: ^8.2.0
+        version: 8.2.0(@spectrum-css/tokens@14.6.0)
+      '@spectrum-css/tokens':
+        specifier: ^14.6.0
+        version: 14.6.0
+      '@spectrum-css/typography':
+        specifier: ^6.2.0
+        version: 6.2.0(@spectrum-css/tokens@14.6.0)
     devDependencies:
       '@greenwood/cli':
         specifier: ~0.30.0
@@ -105,6 +118,24 @@ packages:
     peerDependenciesMeta:
       rollup:
         optional: true
+
+  '@spectrum-css/icon@7.2.0':
+    resolution: {integrity: sha512-P3mnpMxqNZ+YJGhjAHKrcUpKp9wLa2RnuZVYtUsh8bweb4MlYm/4/a2VzeQunrgziU17YNG5KrXyRHpWHv1U9w==}
+    peerDependencies:
+      '@spectrum-css/tokens': '>=14'
+
+  '@spectrum-css/page@8.2.0':
+    resolution: {integrity: sha512-zEOaGprMKsDCGf0e4o6KMDi6WJdQ29tHYjOzghFSLMN4V0Pilr/jSifWts12e6vtqAQDhhgRTfQrGIQrLCnXTA==}
+    peerDependencies:
+      '@spectrum-css/tokens': '>=14'
+
+  '@spectrum-css/tokens@14.6.0':
+    resolution: {integrity: sha512-v/ko2A2i2v4ShHizSdRkOs0fYBVLdiQe5yN/ECFBjpamd0YJHfZGh4uBIGSG+uZjwWpHbKhRusdCRFJKJ+WNYQ==}
+
+  '@spectrum-css/typography@6.2.0':
+    resolution: {integrity: sha512-yaqc4wFY3asUhh3zzdqRI5dVJow7xJ2nL2bo4AADDLT305Dtje5PYO89m+f3nTVf2utKE3H8nlJbWUG57QpFqw==}
+    peerDependencies:
+      '@spectrum-css/tokens': '>=14.5.0'
 
   '@types/accepts@1.3.7':
     resolution: {integrity: sha512-Pay9fq2lM2wXPWbteBsRAGiWH2hig4ZE2asK+mm7kUzlxRTfL961rj89I6zV/E3PcIkDqyuBEcMxFT7rccugeQ==}
@@ -1371,6 +1402,20 @@ snapshots:
       picomatch: 4.0.2
     optionalDependencies:
       rollup: 3.29.5
+
+  '@spectrum-css/icon@7.2.0(@spectrum-css/tokens@14.6.0)':
+    dependencies:
+      '@spectrum-css/tokens': 14.6.0
+
+  '@spectrum-css/page@8.2.0(@spectrum-css/tokens@14.6.0)':
+    dependencies:
+      '@spectrum-css/tokens': 14.6.0
+
+  '@spectrum-css/tokens@14.6.0': {}
+
+  '@spectrum-css/typography@6.2.0(@spectrum-css/tokens@14.6.0)':
+    dependencies:
+      '@spectrum-css/tokens': 14.6.0
 
   '@types/accepts@1.3.7':
     dependencies:

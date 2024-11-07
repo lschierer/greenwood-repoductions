@@ -12,5 +12,11 @@
   "devDependencies": {
     "@greenwood/cli": "~0.30.0"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@spectrum-css/icon": "^7.2.0",
+    "@spectrum-css/page": "^8.2.0",
+    "@spectrum-css/tokens": "^14.6.0",
+    "@spectrum-css/typography": "^6.2.0"
+  }
 }

@@ -1,0 +1,4 @@
+li {
+  margin-left: var(--spectrum-spacing-100);
+  color: var(--spectrum-blue-visual-color);
+}
