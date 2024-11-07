@@ -4,6 +4,7 @@ layout: linktags
 ---
 
 This page is styled using Link Tags
+Note the header is styled here.
 
 * inspect
 * this
