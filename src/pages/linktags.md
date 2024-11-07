@@ -4,7 +4,7 @@ layout: linktags
 ---
 
 This page is styled using Link Tags
-Note the header is styled here.
+Note the header is styled here, but because the app-header tag is unstyled, it is not full width.
 
 - inspect
 - this

@@ -5,7 +5,7 @@ import { greenwoodPluginImportRaw } from "@greenwood/plugin-import-raw";
 
 export default {
   activeContent: true,
-  prerender: false,
+  prerender: true,
   plugins: [
     greenwoodPluginTypeScript({
       extendConfig: true,
