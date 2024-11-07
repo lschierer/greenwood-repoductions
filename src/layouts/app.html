@@ -9,10 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../styles/theme.css" />
     <script type="module" src="../components/header.ts"></script>
+    <script type="module" src="../components/test-element.ts"></script>
   </head>
 
   <body>
     <app-header></app-header>
     <page-outlet></page-outlet>
+    <div>
+      <p>
+        example lit element will mostly work on all pages, except if you look at
+        the console, it has a 500 on one of its attempted css imports:
+      </p>
+      <test-element></test-element>
+    </div>
   </body>
 </html>

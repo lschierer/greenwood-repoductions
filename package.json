@@ -16,9 +16,25 @@
     "@greenwood/plugin-postcss": "^0.30.0",
     "@greenwood/plugin-renderer-lit": "^0.30.0",
     "@greenwood/plugin-typescript": "^0.30.0",
+    "at-rule-packer": "^0.4.2",
+    "cssnano": "^7.0.6",
+    "cssnano-preset-advanced": "^7.0.6",
+    "postcss-extend": "^1.0.5",
+    "postcss-hover-media-feature": "^1.0.2",
+    "postcss-preset-env": "^10.0.9",
+    "postcss-pseudo-classes": "^0.4.0",
+    "stylelint": "^16.10.0",
     "wc-compiler": "^0.15.0"
   },
   "dependencies": {
+    "@iconify/types": "^2.0.0",
+    "@spectrum-css/icon": "^7.2.0",
+    "@spectrum-css/page": "^8.2.0",
+    "@spectrum-css/table": "^6.2.0",
+    "@spectrum-css/tokens": "^14.6.0",
+    "@spectrum-css/typography": "^6.2.0",
+    "@spectrum-css/ui-icons": "^1.1.2",
+    "iconify-icon": "^2.1.0",
     "lit": "^3.2.1",
     "lit-html": "^3.2.1"
   }
