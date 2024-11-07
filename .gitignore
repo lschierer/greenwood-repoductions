@@ -1,4 +1,5 @@
 *DS_Store
+.mise.toml
 *.log
 node_modules/
 public/

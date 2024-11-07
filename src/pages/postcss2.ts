@@ -1,7 +1,6 @@
 export const isolation = true;
-
 async function getBody(compilation, route) {
-  return `
+    return `
       <body>
         <p class="spectrum-Body spectrum-Body--sizeXL">
           If you inspect these elements, you will see the specturm styles have not
@@ -21,10 +20,10 @@ async function getBody(compilation, route) {
   `;
 }
 async function getFrontmatter(compilation, route, label, id) {
-  return {
-    title: "Postcss with bareword imports",
-    layout: "postcss",
-  };
+    return {
+        title: "Postcss with path imports",
+        layout: "postcss",
+    };
 }
-
 export default { getFrontmatter, getBody };
+//# sourceMappingURL=postcss2.js.map

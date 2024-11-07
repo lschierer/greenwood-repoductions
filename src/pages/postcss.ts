@@ -1,6 +1,5 @@
 export const isolation = true;
-
-async function getBody(compilation, route) {
+async function getBody(compilation: {}, route: string) {
   return `
       <body>
         <p class="spectrum-Body spectrum-Body--sizeXL">
@@ -20,11 +19,15 @@ async function getBody(compilation, route) {
       </body>
   `;
 }
-async function getFrontmatter(compilation, route, label, id) {
+async function getFrontmatter(
+  compilation: {},
+  route: string,
+  label: string,
+  id: string
+) {
   return {
-    title: "Postcss with path imports",
+    title: "Postcss with bareword imports",
     layout: "postcss",
   };
 }
-
 export default { getFrontmatter, getBody };

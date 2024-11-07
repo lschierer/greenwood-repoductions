@@ -1,5 +1,4 @@
 const template = document.createElement("template");
-
 export default class HeaderComponent extends HTMLElement {
   connectedCallback() {
     if (!this.shadowRoot) {
@@ -36,9 +35,10 @@ export default class HeaderComponent extends HTMLElement {
           </div>
         </header>
       `;
-      this.attachShadow({ mode: "open" });
-      this.shadowRoot.appendChild(template.content.cloneNode(true));
+      const shadowRoot = this.attachShadow({ mode: "open" });
+      shadowRoot.appendChild(template.content.cloneNode(true));
     }
   }
 }
 customElements.define("app-header", HeaderComponent);
+//# sourceMappingURL=header.js.map

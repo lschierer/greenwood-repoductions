@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES2023",
+    "module": "ESNext",
+    "baseUrl": ".",
+    "declaration": true,
+    "declarationMap": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "Bundler",
+    "sourceMap": true,
+    "verbatimModuleSyntax": true,
+    "plugins": [
+      {
+        "name": "ts-lit-plugin",
+        "strict": true
+      },
+      { "name": "typescript-plugin-css-modules" }
+    ]
+  },
+  "include": ["postcss.config.mts", "src/**/*.ts", "src/styles/*.css"]
+}

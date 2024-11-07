@@ -6,11 +6,11 @@ layout: linktags
 This page is styled using Link Tags
 Note the header is styled here.
 
-* inspect
-* this
-* formatted
-* list
-* to see styles
+- inspect
+- this
+- formatted
+- list
+- to see styles
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id justo vel nisi interdum lobortis at tempus odio. Duis ornare justo in dolor placerat, ut molestie est vestibulum. Curabitur eleifend nulla eros, ut condimentum nisl consequat et. Cras nibh nibh, blandit non augue et, aliquam consequat turpis. Nulla facilisi. Aliquam justo diam, mattis ultricies dolor nec, luctus consectetur justo. Vivamus id accumsan enim. Suspendisse at ante a metus bibendum scelerisque eget et ante. Vivamus et euismod urna.
 
