@@ -27,4 +27,4 @@ async function getFrontmatter(compilation, route, label, id) {
   };
 }
 
-export default { getFrontmatter, getBody };
+export { getFrontmatter, getBody };
