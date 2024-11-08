@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@greenwood/cli": "~0.30.0",
+    "@greenwood/plugin-postcss": "^0.30.0",
     "autoprefixer": "^10.4.20",
     "jiti": "^2.4.0",
     "postcss": "^8.4.47",
