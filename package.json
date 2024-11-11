@@ -17,5 +17,6 @@
   },
   "license": "ISC",
   "dependencies": {
+    "@spectrum-web-components/action-menu": "^1.0.1"
   }
 }
