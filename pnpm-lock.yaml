@@ -9,13 +9,13 @@ importers:
   .:
     devDependencies:
       '@greenwood/cli':
-        specifier: ~0.30.0
-        version: 0.30.0
+        specifier: ~0.30.2
+        version: 0.30.2
 
 packages:
 
-  '@greenwood/cli@0.30.0':
-    resolution: {integrity: sha512-cCHjf5YRTMUbkiRLpetmTp1EnZhrc2z7bDZoVQMit1xoKgnaAY+LGkxonWKCI0dq1jie9cd6ZVmmoVHUaTpHEQ==}
+  '@greenwood/cli@0.30.2':
+    resolution: {integrity: sha512-FBwoqB6adv+kSelnjeNHzGHwRhxo5USfSc+P2n4evExKf9XUJrWN+l7b/xWI05oISX5oOf56vOgBIXOnfIfr6w==}
     engines: {node: '>=18.20.0'}
     hasBin: true
 
@@ -55,11 +55,6 @@ packages:
     resolution: {integrity: sha512-ZBSkr0e2M4ylq74dTGHSkWI2dF3Mz8zwBLyzIXZMftecKDADcsCTj7bWltVgtdl8Rh4+bmY1jNWUw7AlSV/r7A==}
     peerDependencies:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
-
-  '@projectevergreen/escodegen-esm@0.1.0':
-    resolution: {integrity: sha512-LM9FFffsXPHiOFt78K3bgF8kO8Fx+qluAPy9jP3H4lvCFE+2nbwQM4cWdOpVik++rHf4pkDA7FxDPWWATyBABg==}
-    engines: {node: '>=6.0'}
-    hasBin: true
 
   '@rollup/plugin-commonjs@25.0.8':
     resolution: {integrity: sha512-ZEZWTK5n6Qde0to4vS9Mr5x/0UZoqCxPVR9KRUjU4kA2sO7GEUn1fop0DAwpO6z0Nw/kJON9bDmSxdWxO/TT1A==}
@@ -160,8 +155,8 @@ packages:
   '@types/mime@1.3.5':
     resolution: {integrity: sha512-/pyBZWSLD2n0dcHE3hq8s8ZvcETHtEuF+3E7XVt0Ig2nvsVQXdghHVcEkIWjy9A0wKfTn97a/PSDYohKIlnP/w==}
 
-  '@types/node@22.9.0':
-    resolution: {integrity: sha512-vuyHg81vvWA1Z1ELfvLko2c8f34gyA0zaic0+Rllc5lbCnbSyuvb2Oxpm6TAUAC/2xZN3QGqxBNggD1nNR2AfQ==}
+  '@types/node@22.9.1':
+    resolution: {integrity: sha512-p8Yy/8sw1caA8CdRIQBG5tiLHmxtQKObCijiAa9Ez+d4+PRffM4054xbju0msf+cvhJpnFEeNjxmVT/0ipktrg==}
 
   '@types/parse5@5.0.3':
     resolution: {integrity: sha512-kUNnecmtkunAoQ3CnjmMkzNU/gtxG8guhi+Fk2U/kOpIKjIMKnXGp4IJCgQJrXSgMsWYimYG4TGjz/UzbGEBTw==}
@@ -238,6 +233,10 @@ packages:
 
   asap@2.0.6:
     resolution: {integrity: sha512-BSHWgDSAiKs50o2Re8ppvp3seVHXSRM44cdSsT9FfNEUUZLOGWVCsiWaRPWM1Znn+mqZ1OfVZ3z3DWEzSp7hRA==}
+
+  astring@1.9.0:
+    resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
+    hasBin: true
 
   autolinker@0.28.1:
     resolution: {integrity: sha512-zQAFO1Dlsn69eXaO6+7YZc+v84aquQKbwpzCE3L0stj56ERn9hutFxPopViLjo9G+rWwjozRhgS5KJ25Xy19cQ==}
@@ -352,8 +351,8 @@ packages:
   core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
 
-  cross-spawn@7.0.5:
-    resolution: {integrity: sha512-ZVJrKKYunU38/76t0RMOulHOnUcbU9GbpWKAOZ0mhjr7CX6FVrH+4FrAapSOekrgFQ3f/8gwMEuIft0aKq6Hug==}
+  cross-spawn@7.0.6:
+    resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
 
   css-tree@3.0.1:
@@ -437,16 +436,8 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
-  estraverse@5.3.0:
-    resolution: {integrity: sha512-MMdARuVEQziNTeJD8DgMqmhwR11BRQ/cBP+pLtYdSTnf3MIO8fFeiINEbX36ZdNlfU/7A9f3gUw49B3oQsvwBA==}
-    engines: {node: '>=4.0'}
-
   estree-walker@2.0.2:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
-
-  esutils@2.0.3:
-    resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==}
-    engines: {node: '>=0.10.0'}
 
   expand-range@1.8.2:
     resolution: {integrity: sha512-AFASGfIlnIbkKPQwX1yHaDjFvh/1gyKJODme52V6IORh69uEYgZp0o9C+qsIGNVEiuuhQU0CSSl++Rlegg1qvA==}
@@ -779,8 +770,8 @@ packages:
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
 
-  magic-string@0.30.12:
-    resolution: {integrity: sha512-Ea8I3sQMVXr8JhN4z+H/d8zwo+tYDgHE9+5G4Wnrwhs0gaK9fXTKx0Tw5Xwsd/bCPTTZNRAdpyzvoeORe9LYpw==}
+  magic-string@0.30.13:
+    resolution: {integrity: sha512-8rYBO+MsWkgjDSOvLomYnzhdwEG51olQ4zL5KXnNJWV5MNmrb4rTZdrtkhxjnD/QyZUqR/Z/XDsUs/4ej2nx0g==}
 
   markdown-escapes@1.0.4:
     resolution: {integrity: sha512-8z4efJYk43E0upd0NbVXwgSTQs6cT3T06etieCMEg7dRbzCbxUCK/GHlX8mhHRDcp+OLlHkPKsvqQTCvsRl2cg==}
@@ -861,8 +852,8 @@ packages:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
     engines: {node: '>=0.10.0'}
 
-  object-inspect@1.13.2:
-    resolution: {integrity: sha512-IRZSRuzJiynemAXPYtPe5BoI/RESNYR7TYm50MC5Mqbd3Jmw5y790sErYw3V6SryFJD64b74qQQs9wn5Bg/k3g==}
+  object-inspect@1.13.3:
+    resolution: {integrity: sha512-kDCGIbxkDSXE3euJZZXzc6to7fCrKHNI/hSRQnRuQ+BWjFNzZwiFF8fj/6o2t2G9/jTj8PSIYTfCLelLZEeRpA==}
     engines: {node: '>= 0.4'}
 
   object.pick@1.3.0:
@@ -924,8 +915,8 @@ packages:
   property-information@5.6.0:
     resolution: {integrity: sha512-YUHSPk+A30YPv+0Qf8i9Mbfe/C0hdPXk1s1jPVToV8pk8BQtpw10ct89Eo7OWkutrwqvT0eicAxlOg3dOAu8JA==}
 
-  qs@6.13.0:
-    resolution: {integrity: sha512-+38qI9SOr8tfZ4QmJNplMUxqjbe7LKvvZgWdExBOmd+egZTtjLB67Gu0HRX3u/XOq7UU2Nx6nsjvS16Z9uwfpg==}
+  qs@6.13.1:
+    resolution: {integrity: sha512-EJPeIn0CYrGu+hli1xilKAPXODtJ12T0sP63Ijx2/khC2JtuaN3JyNIpvmnkmaEtha9ocbG4A4cMcr+TvqvwQg==}
     engines: {node: '>=0.6'}
 
   randomatic@3.1.1:
@@ -1198,8 +1189,8 @@ packages:
   vfile@4.2.1:
     resolution: {integrity: sha512-O6AE4OskCG5S1emQ/4gl8zK586RqA3srz3nfK/Viy0UPToBc5Trp9BVFb1u0CjsKrAWwnpr4ifM/KBXPWwJbCA==}
 
-  wc-compiler@0.15.0:
-    resolution: {integrity: sha512-bzRjWEal5QGKrryZAsD3V9abuQ4blu2LP23GdrIM1UFybDRor6hcRhYJwdBLPriw017x/J69yPuRXLgAm2xUPQ==}
+  wc-compiler@0.15.1:
+    resolution: {integrity: sha512-pSDhO7r2jBf4x+t1mqLt/GGNw8KfF0g0TQuK8euP7TsNhcMslyP3wOjIai0xzEYkVr9wbJyIRt7LJSLtD776wg==}
     engines: {node: '>=14'}
 
   web-namespaces@1.1.4:
@@ -1249,7 +1240,7 @@ packages:
 
 snapshots:
 
-  '@greenwood/cli@0.30.0':
+  '@greenwood/cli@0.30.2':
     dependencies:
       '@rollup/plugin-commonjs': 25.0.8(rollup@3.29.5)
       '@rollup/plugin-node-resolve': 15.3.0(rollup@3.29.5)
@@ -1274,7 +1265,7 @@ snapshots:
       remark-rehype: 7.0.0
       rollup: 3.29.5
       unified: 9.2.2
-      wc-compiler: 0.15.0
+      wc-compiler: 0.15.1
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -1320,14 +1311,6 @@ snapshots:
     dependencies:
       acorn: 8.14.0
 
-  '@projectevergreen/escodegen-esm@0.1.0':
-    dependencies:
-      esprima: 4.0.1
-      estraverse: 5.3.0
-      esutils: 2.0.3
-    optionalDependencies:
-      source-map: 0.6.1
-
   '@rollup/plugin-commonjs@25.0.8(rollup@3.29.5)':
     dependencies:
       '@rollup/pluginutils': 5.1.3(rollup@3.29.5)
@@ -1335,7 +1318,7 @@ snapshots:
       estree-walker: 2.0.2
       glob: 8.1.0
       is-reference: 1.2.1
-      magic-string: 0.30.12
+      magic-string: 0.30.13
     optionalDependencies:
       rollup: 3.29.5
 
@@ -1352,7 +1335,7 @@ snapshots:
   '@rollup/plugin-replace@5.0.7(rollup@3.29.5)':
     dependencies:
       '@rollup/pluginutils': 5.1.3(rollup@3.29.5)
-      magic-string: 0.30.12
+      magic-string: 0.30.13
     optionalDependencies:
       rollup: 3.29.5
 
@@ -1374,21 +1357,21 @@ snapshots:
 
   '@types/accepts@1.3.7':
     dependencies:
-      '@types/node': 22.9.0
+      '@types/node': 22.9.1
 
   '@types/body-parser@1.19.5':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 22.9.0
+      '@types/node': 22.9.1
 
   '@types/co-body@6.1.3':
     dependencies:
-      '@types/node': 22.9.0
+      '@types/node': 22.9.1
       '@types/qs': 6.9.17
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 22.9.0
+      '@types/node': 22.9.1
 
   '@types/content-disposition@0.5.8': {}
 
@@ -1397,13 +1380,13 @@ snapshots:
       '@types/connect': 3.4.38
       '@types/express': 5.0.0
       '@types/keygrip': 1.0.6
-      '@types/node': 22.9.0
+      '@types/node': 22.9.1
 
   '@types/estree@1.0.6': {}
 
   '@types/express-serve-static-core@5.0.1':
     dependencies:
-      '@types/node': 22.9.0
+      '@types/node': 22.9.1
       '@types/qs': 6.9.17
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
@@ -1417,7 +1400,7 @@ snapshots:
 
   '@types/formidable@2.0.6':
     dependencies:
-      '@types/node': 22.9.0
+      '@types/node': 22.9.1
 
   '@types/hast@2.3.10':
     dependencies:
@@ -1442,7 +1425,7 @@ snapshots:
       '@types/http-errors': 2.0.4
       '@types/keygrip': 1.0.6
       '@types/koa-compose': 3.2.8
-      '@types/node': 22.9.0
+      '@types/node': 22.9.1
 
   '@types/mdast@3.0.15':
     dependencies:
@@ -1450,7 +1433,7 @@ snapshots:
 
   '@types/mime@1.3.5': {}
 
-  '@types/node@22.9.0':
+  '@types/node@22.9.1':
     dependencies:
       undici-types: 6.19.8
 
@@ -1465,12 +1448,12 @@ snapshots:
   '@types/send@0.17.4':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 22.9.0
+      '@types/node': 22.9.1
 
   '@types/serve-static@1.15.7':
     dependencies:
       '@types/http-errors': 2.0.4
-      '@types/node': 22.9.0
+      '@types/node': 22.9.1
       '@types/send': 0.17.4
 
   '@types/unist@2.0.11': {}
@@ -1518,6 +1501,8 @@ snapshots:
       sprintf-js: 1.0.3
 
   asap@2.0.6: {}
+
+  astring@1.9.0: {}
 
   autolinker@0.28.1:
     dependencies:
@@ -1580,7 +1565,7 @@ snapshots:
     dependencies:
       '@hapi/bourne': 3.0.0
       inflation: 2.1.0
-      qs: 6.13.0
+      qs: 6.13.1
       raw-body: 2.5.2
       type-is: 1.6.18
 
@@ -1628,7 +1613,7 @@ snapshots:
 
   core-util-is@1.0.3: {}
 
-  cross-spawn@7.0.5:
+  cross-spawn@7.0.6:
     dependencies:
       path-key: 3.1.1
       shebang-command: 2.0.0
@@ -1690,11 +1675,7 @@ snapshots:
 
   esprima@4.0.1: {}
 
-  estraverse@5.3.0: {}
-
   estree-walker@2.0.2: {}
-
-  esutils@2.0.3: {}
 
   expand-range@1.8.2:
     dependencies:
@@ -1726,7 +1707,7 @@ snapshots:
 
   foreground-child@3.3.0:
     dependencies:
-      cross-spawn: 7.0.5
+      cross-spawn: 7.0.6
       signal-exit: 4.1.0
 
   format@0.2.2: {}
@@ -1736,7 +1717,7 @@ snapshots:
       dezalgo: 1.0.4
       hexoid: 1.0.0
       once: 1.4.0
-      qs: 6.13.0
+      qs: 6.13.1
 
   fresh@0.5.2: {}
 
@@ -2102,7 +2083,7 @@ snapshots:
 
   lru-cache@10.4.3: {}
 
-  magic-string@0.30.12:
+  magic-string@0.30.13:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
 
@@ -2189,7 +2170,7 @@ snapshots:
 
   object-assign@4.1.1: {}
 
-  object-inspect@1.13.2: {}
+  object-inspect@1.13.3: {}
 
   object.pick@1.3.0:
     dependencies:
@@ -2243,7 +2224,7 @@ snapshots:
     dependencies:
       xtend: 4.0.2
 
-  qs@6.13.0:
+  qs@6.13.1:
     dependencies:
       side-channel: 1.0.6
 
@@ -2368,7 +2349,7 @@ snapshots:
       call-bind: 1.0.7
       es-errors: 1.3.0
       get-intrinsic: 1.2.4
-      object-inspect: 1.13.2
+      object-inspect: 1.13.3
 
   signal-exit@4.1.0: {}
 
@@ -2554,13 +2535,12 @@ snapshots:
       unist-util-stringify-position: 2.0.3
       vfile-message: 2.0.4
 
-  wc-compiler@0.15.0:
+  wc-compiler@0.15.1:
     dependencies:
       '@projectevergreen/acorn-jsx-esm': 0.1.0(acorn@8.14.0)
-      '@projectevergreen/escodegen-esm': 0.1.0
       acorn: 8.14.0
-      acorn-import-attributes: 1.9.5(acorn@8.14.0)
       acorn-walk: 8.3.4
+      astring: 1.9.0
       parse5: 6.0.1
       sucrase: 3.35.0
 
