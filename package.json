@@ -11,11 +11,11 @@
     "serve": "node --loader ./node_modules/@greenwood/cli/src/loader.js ./node_modules/@greenwood/cli/src/index.js serve"
   },
   "devDependencies": {
-    "@greenwood/cli": "~0.30.0",
-    "@greenwood/plugin-import-raw": "^0.30.0",
-    "@greenwood/plugin-postcss": "^0.30.0",
-    "@greenwood/plugin-renderer-lit": "^0.30.0",
-    "@greenwood/plugin-typescript": "^0.30.0",
+    "@greenwood/cli": "~0.30.2",
+    "@greenwood/plugin-import-raw": "^0.30.2",
+    "@greenwood/plugin-postcss": "^0.30.2",
+    "@greenwood/plugin-renderer-lit": "^0.30.2",
+    "@greenwood/plugin-typescript": "^0.30.2",
     "at-rule-packer": "^0.4.2",
     "cssnano": "^7.0.6",
     "cssnano-preset-advanced": "^7.0.6",
@@ -37,5 +37,6 @@
     "iconify-icon": "^2.1.0",
     "lit": "^3.2.1",
     "lit-html": "^3.2.1"
-  }
+  },
+  "packageManager": "pnpm@9.13.2"
 }
