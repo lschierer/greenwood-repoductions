@@ -1,4 +1,4 @@
-import { html, css, LitElement } from "lit-element";
+import { html, css, LitElement, type CSSResultArray } from "lit";
 import { unsafeCSS } from "lit";
 import { customElement } from "lit/decorators.js";
 
@@ -14,7 +14,7 @@ export default class TestElement extends LitElement {
     );
     // this will import successfully
     const SpectrumTokensCss = unsafeCSS(
-      import("/node_modules/@spectrum-css/tokens/dist/index.css", {
+      import("@spectrum-css/tokens/dist/index.css", {
         with: { type: "css" },
       })
     );
@@ -25,7 +25,7 @@ export default class TestElement extends LitElement {
       })
     );
     const SpectrumTableCss = unsafeCSS(
-      import("/node_modules/@spectrum-css/table/dist/index.css", {
+      import("@spectrum-css/table/dist/index.css", {
         with: { type: "css" },
       })
     );

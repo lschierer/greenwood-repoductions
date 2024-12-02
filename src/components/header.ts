@@ -1,7 +1,7 @@
-const template = document.createElement("template");
 export default class HeaderComponent extends HTMLElement {
   connectedCallback() {
     if (!this.shadowRoot) {
+      const template = document.createElement("template");
       template.innerHTML = `
         <style>
           .header {

@@ -5,16 +5,22 @@ import { greenwoodPluginImportRaw } from "@greenwood/plugin-import-raw";
 
 export default {
   activeContent: true,
+  isolation: true,
   prerender: true,
+  staticRouter: false,
+  markdown: {
+    plugins: ["remark-gfm"],
+  },
+  optimization: "none",
   plugins: [
     greenwoodPluginTypeScript({
       extendConfig: true,
-      servePage: "dynamic",
+    }),
+    greenwoodPluginRendererLit({
+      prerender: false,
     }),
     greenwoodPluginPostCss({
       extendConfig: true,
     }),
-    greenwoodPluginRendererLit(),
-    greenwoodPluginImportRaw(),
   ],
 };
