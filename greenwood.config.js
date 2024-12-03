@@ -8,17 +8,13 @@ export default {
   isolation: true,
   prerender: true,
   staticRouter: false,
-  markdown: {
-    plugins: ["remark-gfm"],
-  },
+
   optimization: "none",
   plugins: [
     greenwoodPluginTypeScript({
       extendConfig: true,
     }),
-    greenwoodPluginRendererLit({
-      prerender: false,
-    }),
+    greenwoodPluginRendererLit({}),
     greenwoodPluginPostCss({
       extendConfig: true,
     }),
