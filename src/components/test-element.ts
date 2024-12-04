@@ -1,24 +1,28 @@
-import { html, css, LitElement } from "lit";
-import { customElement } from "lit/decorators.js";
+import { html, css, LitElement } from "lit-element";
 
 import "iconify-icon";
 
 import BaseThemeCss from "../styles/theme.css" with { type: "css" };
 
-//fails in dev mode, because the module path does not start with . or /
+//fails in dev mode, because the module path does not start with . or /,
+//able to buildif prerender is false.
+//tsc does not like this.
 //import SpectrumTokens from "@spectrum-css/tokens" with { type: "css" };
 
 //fails in dev mode with a 404 error on the css page request.
+//able to buildif prerender is false.
+//tsc does not like this.
 //import SpectrumTokens from "/node_modules/@spectrum-css/tokens/" with { type: "css" };
 
 //works in develop mode
+//fails in build mode, Error: ENOENT: no such file or directory, open '/node_modules/@spectrum-css/tokens/dist/index.css'
+//tsc prefers this version so long as declaration.d.ts (or a file with its contents) exists.
 import SpectrumTokens from "/node_modules/@spectrum-css/tokens/dist/index.css" with { type: "css" };
 
+//These two imports need to be adjusted to whichever verseion of the token's import you pick from above, or the error(s) will simply move to these lines.
 import SpectrumTypography from "/node_modules/@spectrum-css/typography/dist/index.css" with { type: "css" };
-
 import SpectrumTable from "/node_modules/@spectrum-css/table/dist/index.css" with { type: "css" };
 
-@customElement("test-element")
 export default class TestElement extends LitElement {
   static localStyle = css``;
 
@@ -180,3 +184,4 @@ export default class TestElement extends LitElement {
     `;
   }
 }
+customElements.define("test-element", TestElement);

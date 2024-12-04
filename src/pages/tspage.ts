@@ -1,4 +1,4 @@
-async function getBody(compilation, route) {
+async function getBody(compilation: {}, route: string) {
   return "<!-- some HTML here --><div>test content</div>";
 }
 

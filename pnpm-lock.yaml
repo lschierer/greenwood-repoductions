@@ -20,7 +20,10 @@ importers:
       iconify-icon:
         specifier: ^2.1.0
         version: 2.1.0
-      lit:
+      lit-element:
+        specifier: ^4.1.1
+        version: 4.1.1
+      lit-html:
         specifier: ^3.2.1
         version: 3.2.1
     devDependencies:
@@ -30,6 +33,12 @@ importers:
       '@greenwood/plugin-typescript':
         specifier: ^0.30.2
         version: 0.30.2(@greenwood/cli@0.30.2)
+      '@iconify/types':
+        specifier: ^2.0.0
+        version: 2.0.0
+      '@tsconfig/node22':
+        specifier: ^22.0.0
+        version: 22.0.0
 
 packages:
 
@@ -162,6 +171,9 @@ packages:
     resolution: {integrity: sha512-yaqc4wFY3asUhh3zzdqRI5dVJow7xJ2nL2bo4AADDLT305Dtje5PYO89m+f3nTVf2utKE3H8nlJbWUG57QpFqw==}
     peerDependencies:
       '@spectrum-css/tokens': '>=14.5.0'
+
+  '@tsconfig/node22@22.0.0':
+    resolution: {integrity: sha512-twLQ77zevtxobBOD4ToAtVmuYrpeYUh3qh+TEp+08IWhpsrIflVHqQ1F1CiPxQGL7doCdBIOOCF+1Tm833faNg==}
 
   '@types/accepts@1.3.7':
     resolution: {integrity: sha512-Pay9fq2lM2wXPWbteBsRAGiWH2hig4ZE2asK+mm7kUzlxRTfL961rj89I6zV/E3PcIkDqyuBEcMxFT7rccugeQ==}
@@ -824,9 +836,6 @@ packages:
   lit-html@3.2.1:
     resolution: {integrity: sha512-qI/3lziaPMSKsrwlxH/xMgikhQ0EGOX2ICU73Bi/YHFvz2j/yMCIrw4+puF2IpQ4+upd3EWbvnHM9+PnJn48YA==}
 
-  lit@3.2.1:
-    resolution: {integrity: sha512-1BBa1E/z0O9ye5fZprPtdqnc0BFzxIxTTOO/tQFmyC/hj1O3jL4TfmLBw0WEwjAokdLwpclkvGgDJwTIh0/22w==}
-
   livereload-js@3.4.1:
     resolution: {integrity: sha512-5MP0uUeVCec89ZbNOT/i97Mc+q3SxXmiUGhRFOTmhrGPn//uWVQdCvcLJDy64MSBR5MidFdOR7B9viumoavy6g==}
 
@@ -1464,6 +1473,8 @@ snapshots:
   '@spectrum-css/typography@6.2.0(@spectrum-css/tokens@14.6.0)':
     dependencies:
       '@spectrum-css/tokens': 14.6.0
+
+  '@tsconfig/node22@22.0.0': {}
 
   '@types/accepts@1.3.7':
     dependencies:
@@ -2183,12 +2194,6 @@ snapshots:
   lit-html@3.2.1:
     dependencies:
       '@types/trusted-types': 2.0.7
-
-  lit@3.2.1:
-    dependencies:
-      '@lit/reactive-element': 2.0.4
-      lit-element: 4.1.1
-      lit-html: 3.2.1
 
   livereload-js@3.4.1: {}
 

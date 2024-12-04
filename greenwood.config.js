@@ -3,7 +3,7 @@ import { greenwoodPluginTypeScript } from "@greenwood/plugin-typescript";
 export default {
   activeContent: true,
   isolation: true,
-  prerender: true,
+  prerender: false,
   staticRouter: false,
   plugins: [
     greenwoodPluginTypeScript({

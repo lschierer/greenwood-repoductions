@@ -1,4 +1,4 @@
-const template = document.createElement('template');
+const template = document.createElement("template");
 
 template.innerHTML = `
   <div class="my-logo">
@@ -102,13 +102,13 @@ template.innerHTML = `
   </div>
 `;
 
-class Logo extends HTMLElement {
+export default class Logo extends HTMLElement {
   connectedCallback() {
     if (!this.shadowRoot) {
-      this.attachShadow({ mode: 'open' });
+      this.attachShadow({ mode: "open" });
       this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
   }
 }
 
-customElements.define('x-logo', Logo);
+customElements.define("x-logo", Logo);
