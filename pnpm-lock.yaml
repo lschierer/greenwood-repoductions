@@ -7,10 +7,29 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@spectrum-css/table':
+        specifier: ^6.2.0
+        version: 6.2.0(@spectrum-css/icon@7.2.0(@spectrum-css/tokens@14.6.0))(@spectrum-css/tokens@14.6.0)
+      '@spectrum-css/tokens':
+        specifier: ^14.6.0
+        version: 14.6.0
+      '@spectrum-css/typography':
+        specifier: ^6.2.0
+        version: 6.2.0(@spectrum-css/tokens@14.6.0)
+      iconify-icon:
+        specifier: ^2.1.0
+        version: 2.1.0
+      lit:
+        specifier: ^3.2.1
+        version: 3.2.1
     devDependencies:
       '@greenwood/cli':
         specifier: ~0.30.2
         version: 0.30.2
+      '@greenwood/plugin-typescript':
+        specifier: ^0.30.2
+        version: 0.30.2(@greenwood/cli@0.30.2)
 
 packages:
 
@@ -19,8 +38,16 @@ packages:
     engines: {node: '>=18.20.0'}
     hasBin: true
 
+  '@greenwood/plugin-typescript@0.30.2':
+    resolution: {integrity: sha512-/Qga/1oOKhIbZ9I4rRDTDGqofXvVRMUBrijzKhUNYeVZl9zwmR0MPatvr1miInOrdMtXOFWi+0mSnSykKWvP5w==}
+    peerDependencies:
+      '@greenwood/cli': ^0.30.0
+
   '@hapi/bourne@3.0.0':
     resolution: {integrity: sha512-Waj1cwPXJDucOib4a3bAISsKJVb15MKi9IvmTI/7ssVEm6sywXGjVJDhl6/umt1pK1ZS7PacXU3A1PmFKHEZ2w==}
+
+  '@iconify/types@2.0.0':
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -46,6 +73,12 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
+
+  '@lit-labs/ssr-dom-shim@1.2.1':
+    resolution: {integrity: sha512-wx4aBmgeGvFmOKucFKY+8VFJSYZxs9poN3SDNQFF6lT6NrQUnHiPB2PWz2sc4ieEcAaYYzN+1uWahEeTq2aRIQ==}
+
+  '@lit/reactive-element@2.0.4':
+    resolution: {integrity: sha512-GFn91inaUa2oHLak8awSIigYz0cU0Payr1rcFsrkf5OJ5eSPxElyZfKh0f2p9FsTiZWXQdWGJeXZICEfXXYSXQ==}
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -100,6 +133,35 @@ packages:
     peerDependenciesMeta:
       rollup:
         optional: true
+
+  '@spectrum-css/icon@7.2.0':
+    resolution: {integrity: sha512-P3mnpMxqNZ+YJGhjAHKrcUpKp9wLa2RnuZVYtUsh8bweb4MlYm/4/a2VzeQunrgziU17YNG5KrXyRHpWHv1U9w==}
+    peerDependencies:
+      '@spectrum-css/tokens': '>=14'
+
+  '@spectrum-css/table@6.2.0':
+    resolution: {integrity: sha512-kEEG8Pdox6NsGqzHiYtGkylvFoiaQ43jmKFcr5ie9tr8M74NjHCDoO6PlE/PgZhldENi5MsSGVVy+/w6vUDhwQ==}
+    peerDependencies:
+      '@spectrum-css/button': '>=13'
+      '@spectrum-css/checkbox': '>=9'
+      '@spectrum-css/icon': '>=7'
+      '@spectrum-css/thumbnail': '>=6'
+      '@spectrum-css/tokens': '>=14'
+    peerDependenciesMeta:
+      '@spectrum-css/button':
+        optional: true
+      '@spectrum-css/checkbox':
+        optional: true
+      '@spectrum-css/thumbnail':
+        optional: true
+
+  '@spectrum-css/tokens@14.6.0':
+    resolution: {integrity: sha512-v/ko2A2i2v4ShHizSdRkOs0fYBVLdiQe5yN/ECFBjpamd0YJHfZGh4uBIGSG+uZjwWpHbKhRusdCRFJKJ+WNYQ==}
+
+  '@spectrum-css/typography@6.2.0':
+    resolution: {integrity: sha512-yaqc4wFY3asUhh3zzdqRI5dVJow7xJ2nL2bo4AADDLT305Dtje5PYO89m+f3nTVf2utKE3H8nlJbWUG57QpFqw==}
+    peerDependencies:
+      '@spectrum-css/tokens': '>=14.5.0'
 
   '@types/accepts@1.3.7':
     resolution: {integrity: sha512-Pay9fq2lM2wXPWbteBsRAGiWH2hig4ZE2asK+mm7kUzlxRTfL961rj89I6zV/E3PcIkDqyuBEcMxFT7rccugeQ==}
@@ -175,6 +237,9 @@ packages:
 
   '@types/serve-static@1.15.7':
     resolution: {integrity: sha512-W8Ym+h8nhuRwaKPaDw34QUkwsGi6Rc4yYqvKFo5rm2FUEhCFbzVWrxXUxuKK8TASjWsysJY0nsmNCGhCOIsrOw==}
+
+  '@types/trusted-types@2.0.7':
+    resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
 
   '@types/unist@2.0.11':
     resolution: {integrity: sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==}
@@ -591,6 +656,9 @@ packages:
     resolution: {integrity: sha512-FtwrG/euBzaEjYeRqOgly7G0qviiXoJWnvEH2Z1plBdXgbyjv34pHTSb9zoeHMyDy33+DWy5Wt9Wo+TURtOYSQ==}
     engines: {node: '>= 0.8'}
 
+  iconify-icon@2.1.0:
+    resolution: {integrity: sha512-lto4XU3bwTQnb+D/CsJ4dWAo0aDe+uPMxEtxyOodw9l7R9QnJUUab3GCehlw2M8mDHdeUu/ufx8PvRQiJphhXg==}
+
   iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
     engines: {node: '>=0.10.0'}
@@ -749,6 +817,15 @@ packages:
   list-item@1.1.1:
     resolution: {integrity: sha512-S3D0WZ4J6hyM8o5SNKWaMYB1ALSacPZ2nHGEuCjmHZ+dc03gFeNZoNDcqfcnO4vDhTZmNrqrpYZCdXsRh22bzw==}
     engines: {node: '>=0.10.0'}
+
+  lit-element@4.1.1:
+    resolution: {integrity: sha512-HO9Tkkh34QkTeUmEdNYhMT8hzLid7YlMlATSi1q4q17HE5d9mrrEHJ/o8O2D0cMi182zK1F3v7x0PWFjrhXFew==}
+
+  lit-html@3.2.1:
+    resolution: {integrity: sha512-qI/3lziaPMSKsrwlxH/xMgikhQ0EGOX2ICU73Bi/YHFvz2j/yMCIrw4+puF2IpQ4+upd3EWbvnHM9+PnJn48YA==}
+
+  lit@3.2.1:
+    resolution: {integrity: sha512-1BBa1E/z0O9ye5fZprPtdqnc0BFzxIxTTOO/tQFmyC/hj1O3jL4TfmLBw0WEwjAokdLwpclkvGgDJwTIh0/22w==}
 
   livereload-js@3.4.1:
     resolution: {integrity: sha512-5MP0uUeVCec89ZbNOT/i97Mc+q3SxXmiUGhRFOTmhrGPn//uWVQdCvcLJDy64MSBR5MidFdOR7B9viumoavy6g==}
@@ -1136,6 +1213,11 @@ packages:
   typedarray@0.0.6:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
 
+  typescript@5.7.2:
+    resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   undici-types@6.19.8:
     resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
 
@@ -1271,7 +1353,14 @@ snapshots:
       - supports-color
       - utf-8-validate
 
+  '@greenwood/plugin-typescript@0.30.2(@greenwood/cli@0.30.2)':
+    dependencies:
+      '@greenwood/cli': 0.30.2
+      typescript: 5.7.2
+
   '@hapi/bourne@3.0.0': {}
+
+  '@iconify/types@2.0.0': {}
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -1303,6 +1392,12 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  '@lit-labs/ssr-dom-shim@1.2.1': {}
+
+  '@lit/reactive-element@2.0.4':
+    dependencies:
+      '@lit-labs/ssr-dom-shim': 1.2.1
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
@@ -1354,6 +1449,21 @@ snapshots:
       picomatch: 4.0.2
     optionalDependencies:
       rollup: 3.29.5
+
+  '@spectrum-css/icon@7.2.0(@spectrum-css/tokens@14.6.0)':
+    dependencies:
+      '@spectrum-css/tokens': 14.6.0
+
+  '@spectrum-css/table@6.2.0(@spectrum-css/icon@7.2.0(@spectrum-css/tokens@14.6.0))(@spectrum-css/tokens@14.6.0)':
+    dependencies:
+      '@spectrum-css/icon': 7.2.0(@spectrum-css/tokens@14.6.0)
+      '@spectrum-css/tokens': 14.6.0
+
+  '@spectrum-css/tokens@14.6.0': {}
+
+  '@spectrum-css/typography@6.2.0(@spectrum-css/tokens@14.6.0)':
+    dependencies:
+      '@spectrum-css/tokens': 14.6.0
 
   '@types/accepts@1.3.7':
     dependencies:
@@ -1455,6 +1565,8 @@ snapshots:
       '@types/http-errors': 2.0.4
       '@types/node': 22.9.1
       '@types/send': 0.17.4
+
+  '@types/trusted-types@2.0.7': {}
 
   '@types/unist@2.0.11': {}
 
@@ -1890,6 +2002,10 @@ snapshots:
       statuses: 2.0.1
       toidentifier: 1.0.1
 
+  iconify-icon@2.1.0:
+    dependencies:
+      '@iconify/types': 2.0.0
+
   iconv-lite@0.4.24:
     dependencies:
       safer-buffer: 2.1.2
@@ -2057,6 +2173,22 @@ snapshots:
       extend-shallow: 2.0.1
       is-number: 2.1.0
       repeat-string: 1.6.1
+
+  lit-element@4.1.1:
+    dependencies:
+      '@lit-labs/ssr-dom-shim': 1.2.1
+      '@lit/reactive-element': 2.0.4
+      lit-html: 3.2.1
+
+  lit-html@3.2.1:
+    dependencies:
+      '@types/trusted-types': 2.0.7
+
+  lit@3.2.1:
+    dependencies:
+      '@lit/reactive-element': 2.0.4
+      lit-element: 4.1.1
+      lit-html: 3.2.1
 
   livereload-js@3.4.1: {}
 
@@ -2470,6 +2602,8 @@ snapshots:
       mime-types: 2.1.35
 
   typedarray@0.0.6: {}
+
+  typescript@5.7.2: {}
 
   undici-types@6.19.8: {}
 
