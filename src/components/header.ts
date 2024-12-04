@@ -1,6 +1,13 @@
 import { LitElement, css, html } from "lit";
 
-import SpectrumTokens from "@spectrum-css/tokens" with { type: "css" };
+//tsc complains that it cannot find the type declarations this way
+//import SpectrumTokens from "@spectrum-css/tokens" with { type: "css" };
+
+//comment out the above line and uncomment this one to make tsc happy.  However, you get a runtime error with greenwood dev
+import SpectrumTokens from "@spectrum-css/tokens/dist/index.css" with { type: "css" };
+
+//uncomment this version to get greenwood dev to work
+//import SpectrumTokens from "/node_modules/@spectrum-css/tokens/dist/index.css" with { type: "css" };
 
 export default class HeaderComponent extends LitElement {
   static styles = [
