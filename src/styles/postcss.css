@@ -1,3 +1,9 @@
-@import "@spectrum/tokens/dist/index.css";
-@import "@spectrum-css/page/dist/index.css";
-@import "@spectrum-css/typography/dist/index.css";
+@import "@spectrum-css/tokens";
+@import "@spectrum-css/page";
+@import "@spectrum-css/typography";
+@import "@spectrum-css/tabs";
+
+html {
+  width: auto;
+  height: auto;
+}
