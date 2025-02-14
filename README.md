@@ -8,3 +8,7 @@ mise install
 pnpm install
 pnpm dev
 ```
+
+[mise]: https://mise.jdx.dev/
+[node]: https://nodejs.org/
+[pnpm]: https://pnpm.io/
