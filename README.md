@@ -12,3 +12,4 @@ pnpm dev
 [mise]: https://mise.jdx.dev/
 [node]: https://nodejs.org/
 [pnpm]: https://pnpm.io/
+[just]: https://just.systems/
