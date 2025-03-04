@@ -4,14 +4,25 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "dev": "greenwood develop",
-    "start": "greenwood develop",
-    "build": "greenwood build",
-    "serve": "greenwood serve"
+    "dev": "NODE_OPTIONS='--import @greenwood/cli/register' greenwood develop",
+    "start": "NODE_OPTIONS='--import @greenwood/cli/register' greenwood develop",
+    "build": "NODE_OPTIONS='--import @greenwood/cli/register' greenwood build",
+    "serve": "NODE_OPTIONS='--import @greenwood/cli/register' greenwood serve"
   },
   "devDependencies": {
-    "@greenwood/cli": "~0.30.2"
+    "@greenwood/cli": "~0.32.0-alpha.0",
+    "@greenwood/plugin-google-analytics": "^0.32.0-alpha.0",
+    "@greenwood/plugin-postcss": "^0.32.0-alpha.0",
+    "@greenwood/plugin-typescript": "^0.32.0-alpha.0",
+    "@tsconfig/node22": "^22.0.0",
+    "@types/node": "^22.13.9",
+    "rehype-class-names": "^2.0.0",
+    "rehype-stringify": "^10.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.1",
+    "typescript": "^5.8.2",
+    "unified": "^11.0.5"
   },
-  "license": "ISC",
-  "packageManager": "pnpm@9.13.2+sha512.88c9c3864450350e65a33587ab801acf946d7c814ed1134da4a924f6df5a2120fd36b46aab68f7cd1d413149112d53c7db3a4136624cfd00ff1846a0c6cef48a"
+  "license": "ISC"
 }
