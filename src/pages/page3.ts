@@ -4,18 +4,14 @@ import {
   type GetFrontmatter,
 } from "@greenwood/cli";
 
-import markdownTextProcessing from "../lib/customMarkdownProcessing.ts";
-
 const getBody: (
   compilation: Compilation,
   page: Page,
   request: Request,
 ) => string | Promise<string> = async () => {
-  const bodyText = `
-Test Text being tested.  [Link Home](/)
+  return `
+Test Text being tested.  <a href="/">Link Home</a>
   `;
-
-  return markdownTextProcessing(bodyText);
 };
 
 const getFrontmatter: GetFrontmatter = () => {
