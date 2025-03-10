@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": ["@tsconfig/node22/tsconfig.json"],
   "compilerOptions": {
-    "types": ["node"],
+    "types": ["node", "./globals.d.ts"],
     "allowArbitraryExtensions": true,
     "allowImportingTsExtensions": true,
     "allowJs": true,
@@ -39,8 +39,8 @@
     "strict": true,
     "target": "ESNext",
     "useDefineForClassFields": false,
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": false
   },
   "exclude": ["public"],
-  "include": ["./**/*.ts", "./**/*.mts", "./**/*.tsx", "../../globals.d.ts"]
+  "include": ["./**/*.ts", "./**/*.mts", "./**/*.tsx", "./globals.d.ts"]
 }
