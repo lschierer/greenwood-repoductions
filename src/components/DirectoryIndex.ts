@@ -5,11 +5,6 @@ import "@spectrum-web-components/card/sp-card.js";
 
 import { type Page } from "@greenwood/cli";
 
-const DEBUG = true;
-if (DEBUG) {
-  console.log(`DEBUG enabled for ${new URL(import.meta.url).pathname}`);
-}
-
 import SpectrumCSScard from "@spectrum-css/card/dist/index.css" with { type: "css" };
 import SpectrumCSSlink from "@spectrum-css/link/dist/index.css" with { type: "css" };
 import DirectoryIndexCSS from "../styles/DirectoryIndex.css" with { type: "css" };
@@ -20,17 +15,11 @@ export default class DirectoryIndex extends HTMLElement {
   private _recurse = false;
 
   async connectedCallback() {
-    if (DEBUG) {
-      console.log(`I have attributes ${JSON.stringify(this.attributes)}`);
-    }
+    console.log(`I have attributes ${JSON.stringify(this.attributes)}`);
     for (const attr of this.attributes) {
-      if (DEBUG) {
-        console.log(`evaluating attr ${attr.name} with value ${attr.value}`);
-      }
+      console.log(`evaluating attr ${attr.name} with value ${attr.value}`);
       if (!attr.name.localeCompare("directory")) {
-        if (DEBUG) {
-          console.log(`setting directory attribute`);
-        }
+        console.log(`setting directory attribute`);
         this._directory = attr.value;
       }
       if (!attr.name.localeCompare("recurse")) {
@@ -46,9 +35,7 @@ export default class DirectoryIndex extends HTMLElement {
   }
 
   protected getEntries = async () => {
-    if (DEBUG) {
-      console.log(`DirectoryIndex getEntries for ${this._directory}`);
-    }
+    console.log(`DirectoryIndex getEntries for ${this._directory}`);
     const entries = (
       (await getContentByRoute(
         this._directory.length > 0 ? this._directory : "/",
@@ -66,9 +53,7 @@ export default class DirectoryIndex extends HTMLElement {
         return a.title.localeCompare(b.title);
       }
     });
-    if (DEBUG) {
-      console.log(`getContentByRoute resulted in ${entries.length} entries`);
-    }
+    console.log(`getContentByRoute resulted in ${entries.length} entries`);
     entries.map((entry) => {
       if (entry) {
         if (
@@ -78,31 +63,23 @@ export default class DirectoryIndex extends HTMLElement {
           if (this._recurse) {
             this._entries.push(entry);
           } else {
-            if (DEBUG) {
-              console.log(`recurse set to false`);
-            }
+            console.log(`recurse set to false`);
             const stack = entry.route.split("/");
             const routeStack = this._directory.split("/");
-            if (DEBUG) {
-              console.log(`entry ${entry.route} stack size ${stack.length}`);
-            }
+            console.log(`entry ${entry.route} stack size ${stack.length}`);
             if (stack.length <= routeStack.length + 1) {
               this._entries.push(entry);
             }
           }
         } else {
-          if (DEBUG) {
-            if (
-              !entry.route.localeCompare(encodeURIComponent(this._directory))
-            ) {
-              console.log(
-                `excluding matching route ${entry.route} the same as ${this._directory}`,
-              );
-            } else {
-              console.log(
-                `excluding non-matching route ${entry.route} while comparing ${this._directory}`,
-              );
-            }
+          if (!entry.route.localeCompare(encodeURIComponent(this._directory))) {
+            console.log(
+              `excluding matching route ${entry.route} the same as ${this._directory}`,
+            );
+          } else {
+            console.log(
+              `excluding non-matching route ${entry.route} while comparing ${this._directory}`,
+            );
           }
         }
       }
@@ -118,11 +95,9 @@ export default class DirectoryIndex extends HTMLElement {
 
   renderEntries() {
     if (this._entries.length > 0) {
-      if (DEBUG) {
-        console.log(
-          `DirectoryIndex connectedCallback sees ${this._entries.length} entries after getEntries() call`,
-        );
-      }
+      console.log(
+        `DirectoryIndex connectedCallback sees ${this._entries.length} entries after getEntries() call`,
+      );
 
       if (this.shadowRoot) {
         this.shadowRoot.adoptedStyleSheets.push(SpectrumCSScard);
@@ -131,7 +106,7 @@ export default class DirectoryIndex extends HTMLElement {
 
         this.shadowRoot.innerHTML = `
           <div class="cardBox directoryIndex">
-              <div class="offsetter">${DEBUG ? this._entries.length : ""}</div>
+              <div class="offsetter"> this._entries.length }</div>
 
               ${this._entries
                 .map((entry, index) => {
@@ -181,29 +156,16 @@ export default class DirectoryIndex extends HTMLElement {
           </div>
         `;
       } else {
-        if (DEBUG) {
-          console.log(`shadow root is not accessible`);
-        }
+        console.log(`shadow root is not accessible`);
       }
     } else {
-      if (DEBUG) {
-        const template = `
+      const template = `
           <span>No entries found for '${this._directory}'</span>
         `;
-        if (this.shadowRoot) {
-          this.shadowRoot.innerHTML = template;
-        }
-        this.innerHTML = template;
-      } else {
-        const template = `
-          <!-- No Entries found for ${this._directory} -->
-        `;
-        if (this.shadowRoot) {
-          this.shadowRoot.innerHTML = template;
-        } else {
-          this.innerHTML = template;
-        }
+      if (this.shadowRoot) {
+        this.shadowRoot.innerHTML = template;
       }
+      this.innerHTML = template;
     }
   }
 }
