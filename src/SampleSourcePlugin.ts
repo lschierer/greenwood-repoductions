@@ -22,7 +22,8 @@ export const SampleSourcePlugin = (): SourcePlugin => {
           title: "Lügner2",
           id: "Lügner2",
           label: "Lügner2",
-          route: "/Lügner2/",
+          //route: "/Lügner2/",
+          route: "/lugner2/",
           body: `
             <span>This is a test page for the sample source plugin</span>
           `,
