@@ -1,5 +1,7 @@
 import { greenwoodPluginPostCss } from "@greenwood/plugin-postcss";
 
+import { SampleSourcePlugin } from "./src/SampleSourcePlugin.ts";
+
 export default {
   useTsc: true,
   activeContent: true,
@@ -19,8 +21,9 @@ export default {
     },
   },
   plugins: [
-   greenwoodPluginPostCss({
+    SampleSourcePlugin(),
+    greenwoodPluginPostCss({
       extendConfig: true,
     }),
-  ]
+  ],
 };
