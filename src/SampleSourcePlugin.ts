@@ -26,6 +26,7 @@ export const SampleSourcePlugin = (): SourcePlugin => {
           route: "/lugner2/",
           body: `
             <span>This is a test page for the sample source plugin</span>
+	    <span>this page will cause route undefined</span>
           `,
         };
         returnArray.push(page2);

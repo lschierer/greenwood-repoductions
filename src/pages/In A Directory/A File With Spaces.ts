@@ -20,7 +20,10 @@ const getBody: GetBody = async () => {
   });
   /* end workaround */
 
-  return `<span>this is a test page for type script pages with getBody and an imported layout and spaces in the filename</span>`;
+  return `
+   <span>this is a test page for type script pages with getBody and an imported layout and spaces in the filename</span>
+   <span>this page will cause A RollupError.</span>
+  `;
 };
 
 const getFrontmatter: GetFrontmatter = async () => {
