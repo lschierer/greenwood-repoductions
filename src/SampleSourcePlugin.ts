@@ -18,12 +18,12 @@ export const SampleSourcePlugin = (): SourcePlugin => {
         };
         returnArray.push(page);
 
+	const UTF8String = "Lügner2";
         const page2: ExternalSourcePage = {
-          title: "Lügner2",
-          id: "Lügner2",
-          label: "Lügner2",
-          //route: "/Lügner2/",
-          route: "/lugner2/",
+          title: UTF8String,
+          label: UTF8String,
+          route: `/${encodeURIComponent(UTF8String)}/`,
+          //route: "/lugner2/",
           body: `
             <span>This is a test page for the sample source plugin</span>
           `,
