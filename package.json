@@ -1,16 +1,27 @@
 {
-  "name": "test-css",
+  "name": "reproductions",
   "version": "1.0.0",
   "description": "",
   "type": "module",
   "scripts": {
-    "dev": "greenwood develop",
-    "start": "greenwood develop",
-    "build": "greenwood build",
-    "serve": "greenwood serve"
+    "dev": "NODE_OPTIONS='--experimental-strip-types --import @greenwood/cli/register' greenwood develop",
+    "dev:debug": "NODE_OPTIONS='--trace-warnings --inspect --experimental-strip-types --import @greenwood/cli/register' greenwood develop",
+    "start": "NODE_OPTIONS='--import @greenwood/cli/register' greenwood develop",
+    "build": "NODE_OPTIONS='--experimental-strip-types --import @greenwood/cli/register' greenwood build",
+    "build:debug": "NODE_OPTIONS='--trace-warnings --inspect --experimental-strip-types --import @greenwood/cli/register' greenwood build",
+    "serve": "NODE_OPTIONS='--experimental-strip-types --import @greenwood/cli/register' greenwood serve"
   },
   "devDependencies": {
-    "@greenwood/cli": "~0.32.0-alpha.6"
+    "@greenwood/cli": "^0.32.0",
+    "@greenwood/plugin-postcss": "^0.32.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "rehype-parse": "^9.0.1",
+    "rehype-stringify": "^10.0.1",
+    "unified": "^11.0.5",
+    "zod": "^3.24.3"
+  }
 }
