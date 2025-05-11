@@ -1,0 +1,27 @@
+{
+  "name": "@monorepo/frontend",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_OPTIONS='--experimental-strip-types --import @greenwood/cli/register' greenwood develop",
+    "start": "NODE_OPTIONS='--import @greenwood/cli/register' greenwood develop",
+    "build": "NODE_OPTIONS='--max-old-space-size=11264 --experimental-strip-types --import @greenwood/cli/register' greenwood build",
+    "build:debug": "NODE_OPTIONS='--trace-warnings --inspect --experimental-strip-types --import @greenwood/cli/register' greenwood build",
+    "serve": "NODE_OPTIONS='--experimental-strip-types  --import @greenwood/cli/register' greenwood serve"
+  },
+  "devDependencies": {
+    "@greenwood/cli": "~0.32.0",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-class-names": "^2.0.0",
+    "remark-alerts": "^0.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-rehype": "^11.1.2"
+  },
+  "dependencies": {
+    "@monorepo/assets": "workspace:^",
+    "@monorepo/schemas": "workspace:^",
+    "@spectrum-web-components/card": "^1.6.0"
+  },
+  "license": "ISC"
+}

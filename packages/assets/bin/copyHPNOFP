@@ -1,0 +1,11 @@
+#!/usr/bin/env perl
+use v5.40.0;
+use experimental qw(class);
+use utf8::all;
+use Carp;
+use File::FindLib 'lib';
+
+use App::CopyHPNOFP;
+binmode *STDOUT, ':utf8';
+
+App::CopyHPNOFP->run;

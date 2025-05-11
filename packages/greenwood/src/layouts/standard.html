@@ -1,0 +1,35 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+  <sp-theme class="spectrum-Typography">
+    <header>
+      <div class="topHeader" route="${globalThis.page.route}"></div>
+
+      <theme-component></theme-component>
+    </header>
+    <div class="title-section">
+      <h1 class="spectrum-Heading spectrum-Heading--sizeXXL">
+        ${globalThis.page.title}
+      </h1>
+    </div>
+
+    <sp-split-view resizable primary-size="20%">
+      <div class="nav"></div>
+      <div class="main">
+        <main>
+          <content-outlet></content-outlet>
+        </main>
+      </div>
+    </sp-split-view>
+    <footer class="footer">
+      <span
+        id="copyright"
+        class="copyright spectrum-Detail spectrum-Detail--serif spectrum-Detail--sizeM spectrum-Detail--light"
+      >
+        COPYRIGHTPLACEHOLDER
+      </span>
+    </footer>
+  </sp-theme>
+</body>
