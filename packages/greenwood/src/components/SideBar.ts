@@ -5,7 +5,7 @@ import { getContent } from "@greenwood/cli/src/data/client.js";
 //enable the next line for this component to work in dev mode
 //import SideBarCSS from "/node_modules/@monorepo/assets/dist/styles/sidebar.css" with { type: "css" };
 //enable this next line for the component to work when deployed.
-import SideBarCSS from "@monorepo/assets/dist/styles/sidebar.css" with { type: "css" };
+import SideBarCSS from "@monorepo/assets/styles/sidebar.css" with { type: "css" };
 
 import debugFunction from "../lib/debug.ts";
 const DEBUG = debugFunction(new URL(import.meta.url).pathname);

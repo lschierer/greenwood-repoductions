@@ -19,7 +19,8 @@
   ],
   "exports": {
     ".": "./dist/scripts/build-css.js",
-    "./dist/*": "./dist/*"
+    "./dist/*": "./dist/*",
+    "./styles/*.css": "./dist/styles/*.css"
   },
   "devDependencies": {
     "@types/hast": "^3.0.4",
